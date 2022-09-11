@@ -1,0 +1,19 @@
+{
+  "name": "dev-articles-extension",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "nodemon --watch 'src/**/*' -e '*' --exec 'yarn build'"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vite-plugin-chrome-extension": "^0.0.7"
+  },
+  "dependencies": {
+    "@types/chrome": "^0.0.196",
+    "nodemon": "^2.0.19"
+  }
+}

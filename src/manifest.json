@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram tooler",
+  "description": "Fancy instagram tools",
+  "version": "0.0.0",
+  "background": {
+    "service_worker": "background.ts"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/*", "https://instagram.com/*"],
+      "js": ["content_script.ts"]
+    }
+  ],
+  "permissions": ["storage", "tabs", "activeTab"],
+  "action": {
+    "default_icon": {
+      "16": "icon-disabled.png",
+      "24": "icon-disabled.png",
+      "32": "icon-disabled.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "host_permissions": ["https://*/*", "http://*/*"]
+}
